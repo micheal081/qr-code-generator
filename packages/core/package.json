@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "name": "@qrcode-renderer/core",
+  "repository": "https://github.com/klarna-incubator/qrcode-renderer",
+  "main": "dist/index.js",
+  "module": "dist/core.esm.js",
+  "browser": "dist/core.umd.production.min.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build --format cjs,esm,umd",
+    "test": "tsdx test",
+    "lint": "tsdx lint src",
+    "prepare": "tsdx build"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "devDependencies": {
+    "husky": "^5.0.0",
+    "tsdx": "^0.14.0",
+    "tslib": "^2.0.1",
+    "typescript": "^3.9.7"
+  }
+}
